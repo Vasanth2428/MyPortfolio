@@ -1,16 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vasanthavel K | Frontend Developer</title>
+  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+</head>
+<body>
+  <div class="hero-header">
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <i class="fa-solid fa-a"></i>
+          <div class="logo-text">Vasanthavel K</div>
+        </div>
+        <nav>
+          <div class="togglebtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="navlinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="hero-pic">
+          <img src="GreenFlames.jpeg" alt="profile pic" />
+        </div>
+        <div class="hero-text">
+          <h5>Hi, I'm a <span class="input">Frontend Developer</span></h5>
+          <h1>Vasanthavel K</h1>
+          <p>
+            Passionate frontend developer with experience in building responsive websites and web applications. I focus on creating elegant solutions with clean code and intuitive user interfaces.
+          </p>
+
+          <div class="btn-group">
+            <a href="velson2022@gmail.com" class="btn active">Let's Connect</a>
+
+          </div>
+
+          <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="wrapper">
+      <h2>Projects & Experience</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Personal Portfolio Website</h3>
+          <p>A fully responsive website showcasing my profile, built with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project-card">
+          <h3>E-commerce Product Page</h3>
+          <p>Created a mock product detail page with image carousel and add-to-cart functionality using React.</p>
+        </div>
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>Developed a weather forecast app using OpenWeather API and vanilla JS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typed.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+  <script>
+    var togglebtn = document.querySelector(".togglebtn");
+    var nav = document.querySelector(".navlinks");
+
+    togglebtn.addEventListener("click", function () {
+      this.classList.toggle("click");
+      nav.classList.toggle("open");
+    });
+
+    var typed = new Typed(".input", {
+      strings: ["Frontend Developer", "App Developer", "Web Developer"],
+      typeSpeed: 70,
+      backSpeed: 55,
+      loop: true,
+    });
+  </script>
+</body>
 </html>
