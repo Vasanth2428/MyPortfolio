@@ -1,20 +1,306 @@
+/* Reset and base */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
 }
-html {
-  font-size: 60%;
-  overflow-x: hidden;
+body {
+    overflow-x: hidden;
+    background-color: #000; /* black background for contrast */
+    color: #e5e5e5;
 }
-:root {
-  --bg-color: #080808;
-  --second-bg-color: #001005;
-  --text-color: white;
-  --main-color: #00ff51;
+
+/* Hero Section */
+.hero-header {
+    width: 100%;
+    min-height: 100vh;
+    background: #111; /* dark background */
+}
+
+.wrapper {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #39ff14; /* green flame color */
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #007f0e; /* darker green for circle */
+    border-radius: 50%;
+    color: #39ff14;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #39ff14;
+}
+
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: #39ff14;
+    margin: 5px 0;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+nav .navlinks {
+    list-style-type: none;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: #a8ff73;
+    margin-right: 2.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav .navlinks li a:hover {
+    color: #39ff14;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.container .hero-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #004d00;
+    box-shadow: 0 0 25px #39ff14;
+}
+
+.hero-pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* prevents stretching */
+    transition: 0.5s;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h5 {
+    color: #a8ff73;
+    font-size: 14px;
+}
+
+.hero-text h5 span {
+    color: #39ff14;
+    font-size: 16px;
+}
+
+.hero-text h1 {
+    color: #39ff14;
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.hero-text p {
+    color: #cce5aa;
+    margin-bottom: 30px;
+}
+
+.btn-group .btn {
+    border-color: #39ff14;
+    color: #39ff14;
+    background-color: transparent;
+    padding: 12px 25px;
+    margin: 5px 7px 5px 0;
+    border-radius: 30px;
+    border: 2px solid #39ff14;
+    box-shadow: 0 10px 10px -8px rgba(57, 255, 20, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    display: inline-block;
+}
+
+.btn-group .btn.active,
+.btn-group .btn:hover {
+    background-color: #000;         /* black background */
+    color: #fff;                    /* white text */
+    border: 4px solid #39ff14;      /* thicker green border */
+    box-shadow: 0 0 10px #39ff14;  /* subtle green glow */
+}
+
+
+.hero-text .social a {
+    color: #a8ff73;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.5s ease;
+}
+
+.hero-text .social a:hover {
+    color: #39ff14;
+    transform: rotate(360deg);
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #111;
+    color: #e5e5e5;
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    color: #39ff14;
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.project-card {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    text-align: left;
+    border-left: 4px solid #39ff14;
+    transition: background-color 0.3s ease;
+}
+
+.project-card:last-child {
+    margin-bottom: 0;
+}
+
+.project-card:hover {
+    background-color: rgba(57, 255, 20, 0.1);
+}
+
+.project-card h3 {
+    color: #39ff14;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Responsive Navigation & Sections */
+@media (max-width: 930px) {
+    nav .togglebtn {
+        display: initial;
+    }
+    /* toggle button animation */
+    .click span:first-child {
+        transform: rotate(-40deg);
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+    }
+    nav .navlinks {
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #111;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0;
+    }
+    nav .navlinks li {
+        display: block;
+    }
+    nav .navlinks li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    nav .navlinks.open {
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .hero-text {
+        padding: 40px 0;
+    }
+    .projects-container {
+        max-width: 90%;
+    }
 }
